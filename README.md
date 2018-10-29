@@ -16,7 +16,7 @@ It accept a single paramater named `path`.
 
 Pass the whole path of a post you'd like to retrieve:
 
-`http://MYWORDPRESSURL/wp-json/wp-router-api/v1/by/path?=/path/to/post`
+`http://MYWORDPRESSURL/wp-json/wp-router-api/v1/by/path?path=/path/to/post`
 
 The response will be a standard WordPress post object, with the following additional properties:
 
@@ -26,3 +26,5 @@ The response will be a standard WordPress post object, with the following additi
 ## Technical Notes
 
 Tested with WordPress v4.9.8, PHP 7.1.6
+
+In some situations your path string may need to be a UTF-8 encoded string such as the result of encodeURI in JS or urlencode in PHP.
